@@ -1,7 +1,5 @@
 # JavaScript Assessment: Find Your Hat
 
-[Codecademy](https://www.codecademy.com/projects/practice/find-your-hat)
-
 ## Table of Contents
 
 - [JavaScript Assessment: Find Your Hat](#javascript-assessment-find-your-hat)
@@ -10,8 +8,14 @@
   - [Project Goals](#project-goals)
   - [Project Requirements](#project-requirements)
     - [Game Rules:](#game-rules)
-  - [JavaScript Assessment Rubric](#javascript-assessment-rubric)
-    - [Thinking Process](#thinking-process)
+  - [JS/TS Assessment (Find Your Hat) Total: 100 points](#jsts-assessment-find-your-hat-total-100-points)
+    - [1. Workflow Planning (10 points)](#1-workflow-planning-10-points)
+    - [2.1. Board Functions (Hardcoded) (10 points)](#21-board-functions-hardcoded-10-points)
+    - [2.2. Board Functions (Generated) (20 points)](#22-board-functions-generated-20-points)
+    - [3. Input Functions (10 points)](#3-input-functions-10-points)
+    - [4. Movement Functions (10 points)](#4-movement-functions-10-points)
+    - [5. Game Rule Functions (20 points)](#5-game-rule-functions-20-points)
+    - [6. Game Play Loop (20 points)](#6-game-play-loop-20-points)
 
 ---
 
@@ -19,7 +23,7 @@
 
 1. Clone the assessment repository, open it in your working directory, commit your progress accordingly, and push the repository to share it with the instructors.
 2. Read the instructions in the `README.md` file.
-3. Start the project:
+3. Start the project: (for TypeScript execute code with `npm run dev:ts`)
 
    ```terminal
    npm install
@@ -27,7 +31,7 @@
    ```
 
 4. Edit `package.json` file by updating the `"author"` field with your Zoom name.
-5. Edit **Thinking Process** section at the end of the `README.md` file. 👉 [Go to Thinking Process](#thinking-process)
+5. Edit **Thinking Process** in [`thinking-process.md`](./thinkimg-process.md)
 
 [🔝 Back to Table of Contents](#table-of-contents)
 
@@ -42,25 +46,13 @@
 
 ## Project Requirements
 
-- Your project is centered on a `Field` class.
-- Give your `Field` class a `.print()` method that prints the current state of the field.
-
-  > The Field constructor should take a two-dimensional array representing the “field” itself.
-  >
-  > A field consists of a grid containing “holes” (O) and one “hat” (^).
-  >
-  > We use a neutral background character (░) to indicate the rest of the field itself.
-  >
-  > The player will begin in the upper-left of the field, and the player’s path is represented by \*.
+- Give your game a `.printBoard()` method that prints the current state of the game.
+- Board consists of a grid containing “holes” (O) and one “hat” (^).
+- We use `EMPTY` a neutral background character (░) to indicate the rest of the walkable grid itself.
 
   ```js
-  const myField = new Field([
-  	["*", "░", "O"],
-  	["░", "O", "░"],
-  	["░", "^", "░"],
-  ]);
-
   // Output:
+
   *░O
   ░O░
   ░^░
@@ -76,69 +68,91 @@
 
 ### Game Rules:
 
-**1. Wins by finding their hat.**
-
-**2. Loses by landing on (and falling in) a hole.**
-
-**3. Loses by attempting to move “outside” the field.**
-
-**When any of the above occur, let the user know and end the game.**
+- Wins by finding the hat.
+- Loses by landing in a hole.
+- Loses by moving outside the board.
 
 [🔝 Back to Table of Contents](#table-of-contents)
 
 ---
 
-## JavaScript Assessment Rubric
+## JS/TS Assessment (Find Your Hat) Total: 100 points
 
-1. Class Method ที่ควรมีครบ: (2 pts ครบถ้วน | 1 pts มีไม่ครบ | 0 pts ไม่มีเลย)
+### 1. Workflow Planning (10 points)
 
-- constructor
-- moveRight
-- moveLeft
-- moveUp
-- moveDown
+Draw a flowchart or write steps describing:
 
-2. Print Map (2 pts ครบถ้วน | 1 pts มีไม่ครบ | 0 pts ไม่มีเลย)
+[Game start → Read input → Update position → Check rules → End/Continue]
 
-3. เดินได้ถูกต้อง & Update Map ได้ถูกต้อง (2 pts ครบถ้วน | 1 pts มีไม่ครบ | 0 pts ไม่มีเลย)
+Must include:
 
-- เลี้ยวซ้าย
-- เลี้ยวขวา
-- ขึ้น
-- ลง
+- Input/output of each function.
+- Edge cases (invalid input, boundaries, hole/hat tiles).
 
-4. Game Logic: (2 pts ครบถ้วน | 1 pts มีไม่ครบ | 0 pts ไม่มีเลย)
+### 2.1. Board Functions (Hardcoded) (10 points)
 
-- Wins by finding their hat
-- Loses by landing on (and falling in) a hole.
-- Attempts to move "outside" the field. (Warning message when actor attempts to move outside)
+Prints the hardcoded board in terminal.
 
-5. มี Random ตำแหน่ง: (2 pts ครบถ้วน | 1 pts มีไม่ครบ | 0 pts ไม่มีเลย)
+Thinking process should explain:
 
-- holes
-- hat
-- actor
-  2 pts
+- How the board is represented (2D array).
+- Tile types (PLAYER, EMPTY, HOLE, HAT).
 
-6. Thinking process & Breakdown the steps of a thinking process (5 pts ครบถ้วน | 3 pts มีไม่ครบ | 0 pts ไม่มีเลย)
+### 2.2. Board Functions (Generated) (20 points)
 
-[🔝 Back to Table of Contents](#table-of-contents)
+Creates a random board with player, hat, and holes.
+Prints the board in terminal.
 
----
+Thinking process should explain:
 
-**Please Write Down Your Thinking Process Below:**
+- How the board is represented (2D array).
+- Tile types (PLAYER, EMPTY, HOLE, HAT).
+- How random placement avoids overlaps.
 
----
+### 3. Input Functions (10 points)
 
-### Thinking Process
+Reads and validates user input (w, a, s, d).
+Logs invalid input.
 
-1. // step 1
-2. // step 2
-3. // ...
-4. // step n
+Thinking process should explain:
 
-_Notes:_<br>
-_- You can attach flowcharts, diagrams, and images as needed._<br>
-_- The purpose of this section is not to explain your code but rather to convey your thoughts and ideas._
+- Input/output.
+- Edge cases (invalid input, boundaries).
+- How player position is updated.
+
+### 4. Movement Functions (10 points)
+
+Updates playerRow / playerCol based on the move.
+
+Thinking process should explain:
+
+- Input/output.
+- Edge cases (invalid input, boundaries).
+- How player position is updated.
+
+### 5. Game Rule Functions (20 points)
+
+Checks for out-of-bounds, falling into a hole, or finding the hat.
+Game Rules:
+
+- Wins by finding the hat.
+- Loses by landing in a hole.
+- Loses by moving outside the board.
+
+Thinking process should explain:
+
+- How to determine win/loss conditions.
+- Handling messages for win/loss conditions.
+
+### 6. Game Play Loop (20 points)
+
+Combine all functions into a playable loop.
+Ensure messages appear correctly, board prints at start, and invalid input is handled.
+
+Thinking process should explain:
+
+- How to determine win/loss conditions.
+- Handling messages for win/loss conditions
+- How to update the board when the player moves.
 
 [🔝 Back to Table of Contents](#table-of-contents)

@@ -1,9 +1,9 @@
 # Thinking Process Guidelines
 
-## Table of Contents [Thinking Process Guidelines](#thinking-process-guidelines)
+## Table of Contents
 
 - [Thinking Process Guidelines](#thinking-process-guidelines)
-  - [Table of Contents Thinking Process Guidelines](#table-of-contents-thinking-process-guidelines)
+  - [Table of Contents](#table-of-contents)
   - [1. Workflow Planning](#1-workflow-planning)
   - [2.1. Board Functions (Hardcoded)](#21-board-functions-hardcoded)
   - [2.2. Board Functions (Generated)](#22-board-functions-generated)
@@ -11,7 +11,7 @@
   - [4. Movement Functions](#4-movement-functions)
   - [5. Game Rule Functions](#5-game-rule-functions)
   - [6. Game Play Loop](#6-game-play-loop)
-  - [WRITE YOUR THINKING PROCESS BELOW. ](#write-your-thinking-process-below)
+- [WRITE YOUR THINKING PROCESS BELOW. ](#write-your-thinking-process-below)
 
 ## <span style="font-weight:bold; color: black; background-color: gold; padding: 0.5rem 2rem;">1. Workflow Planning</span>
 
@@ -83,7 +83,7 @@
 
 - Wins by finding the hat.
 - Loses by landing in a hole.
-- Loses by moving outside the field.
+- Loses by moving outside the board.
 
 <span style="font-weight:bold; color: gold;">Thinking process should explain:</span>
 
@@ -103,7 +103,7 @@
 
 ---
 
-## <p style="display: flex; align-items: center; gap: 0.5em;"><span style="font-weight:bold; color: white; background-color: lightSeaGreen; padding: 0.5rem 2rem;">WRITE YOUR THINKING PROCESS BELOW.</span><span style="font-weight:bold; color: white; background-color: lightSeaGreen; padding: 0.5rem 0;">&nbsp;</span></p>
+# <p style="display: flex; align-items: center; gap: 0.5em;"><span style="font-weight:bold; color: white; background-color: lightSeaGreen; padding: 0.5rem 2rem;">WRITE YOUR THINKING PROCESS BELOW.</span><span style="font-weight:bold; color: white; background-color: lightSeaGreen; padding: 0.5rem 0;">&nbsp;</span></p>
 
 <!-- Thinking Process -->
 <!-- 1. Workflow Planning -->
@@ -114,6 +114,6 @@
 <!-- 5. Game Rule Functions -->
 <!-- 6. Game Play Loop -->
 
-[Back to Table of Contents](#table-of-contents-thinking-process-guidelines)
+[Back to Table of Contents](#table-of-contents)
 
 ---
